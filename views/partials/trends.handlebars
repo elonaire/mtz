@@ -1,0 +1,16 @@
+<!--Trending-->
+{{#each products}}
+  <div class="product-sec">
+    <div class="{{class}}">
+      <a href="#"><h2>{{category}}</h2></a>
+    </div>
+
+    <div class="product">
+      <a href="{{request.get}}">
+        <img src="../uploads/{{img}}" alt="product-img">
+        <h3>{{name}}</h3>
+        <p>Ksh.<span>{{price}}</span></p>
+      </a>
+    </div>
+  </div>
+{{/each}}

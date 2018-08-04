@@ -1,0 +1,173 @@
+@import 'nav.css';
+@import 'home.css';
+@import 'footer.css';
+@import 'product.css';
+@import 'admin.css';
+@import 'products.css';
+
+*{
+	margin: 0;
+	text-decoration: none;
+}
+
+ul{
+	padding-left: 0;
+	margin-left: 0;
+}
+
+body{
+	background-color: rgb(212, 233, 255);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+		flex: 100%
+}
+
+.col-12{
+	flex: 100%
+	height: auto;
+	overflow-wrap: normal;
+	width: 100%;
+}
+
+.col-6{
+	flex: 50%;
+	height: auto;
+	overflow-wrap: normal;
+}
+
+.col-4{
+	flex: 33.333333333%;
+	height: auto;
+	overflow-wrap: normal;
+}
+
+.col-3{
+	flex: 25%;
+	height: auto;
+	overflow-wrap: normal;
+}
+
+main{
+	flex: 70%;
+	height: auto;
+	flex-wrap: wrap;
+	overflow-wrap: normal;
+}
+
+aside{
+	flex: 30%;
+	height: auto;
+	overflow-wrap: normal;
+}
+
+.btn-lg{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+}
+
+.btn-success{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+	background-color: #0c9917;
+	color: #fff;
+	border-radius: 4px;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+input[type='text'], input[type='password'], input[type='email']{
+	border: 0;
+	padding: 7px;
+	width: 100%;
+	border: 0.1em solid #607de5;
+	margin: 10px 0 10px 0;
+	border-radius: 4px;
+}
+
+input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, textarea:focus{
+	border: 0;
+	padding: 7px;
+	border: 0.1em solid #607de5;
+	margin: 10px 0 10px 0;
+	box-shadow: 1px 1px 1px 1px rgb(26, 140, 255);
+}
+
+textarea{
+	border: 0;
+	padding: 7px;
+	width: 100%;
+	border: 0.1em solid #607de5;
+	margin: 10px 0 10px 0;
+	resize: none;
+	border-radius: 4px;
+}
+
+input[type="submit"]:hover{
+	cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-align: center;
+}
+
+.btn-primary{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+	background-color: #2b6fdb;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.btn-lgout{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+}
+
+.message-box{
+	width: 300px;
+	height: auto;
+	padding: 10px;
+	z-index: 999;
+	overflow-wrap: normal;
+	border-radius: 7px;
+	background-color: #47ed49;
+}
+
+.btn-warning{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+	background-color: orange;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.btn-danger{
+	border: 0;
+	padding: 7px 18px 7px 18px;
+	background-color: rgb(255,79,79);
+	color: #fff;
+	border-radius: 4px;
+}
+
+.lg{
+	padding: 15px 25px 15px 25px;
+}
+
+.sm{
+	padding: 5px 9px 5px 9px;
+}
+
+.desktop ul li form .search{
+	width: 600px;
+}
+
+label{
+	font-weight: bold;
+	color: rgb(79, 79, 79);
+}

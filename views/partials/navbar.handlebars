@@ -1,0 +1,37 @@
+<div class="navbar">
+  <header>
+    <nav class="desktop">
+      <ul>
+        <li><img src="/img/menu.png" alt="menu" ></li>
+        <li><a href="/"><img src="/img/logo.png" alt="logo" ></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li><form method="post" action="#"><input type="text" class="search" placeholder="Search..." name=""><button type="submit" class="btn-primary"><img src="/img/search.png" alt="search"></button></form></li>
+        <li><a href="#" id="login">Login</a></li>
+        <li><a href="#" id="signup">Signup</a></li><br>
+        <li class="caret"><a href="#">Categories&nbsp;<span class="more">&#10093;<span></a></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="/sell">Sell on MTZ</a></li>
+        <li><a href="/deals">Top Deals</a></li>
+        <li><a href="/services">Services</a></li>
+        <li class="right" title="Cart"><img src="/img/trolley.png" alt="trolley"></li>
+        <li class="right" title="User Account"><img src="/img/user.png" alt="user"></li>
+      </ul>
+    </nav>
+
+    <nav class="mobile">
+      <ul>
+        <li><img src="/img/menu.png" alt="menu" ><form method="post" action="#"><input type="text" class="search" placeholder="Search..." name=""><button type="submit" class="btn-primary"><img src="/img/search.png" alt="search"></button></form></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="/sell">Sell on MTZ</a></li>
+        <li><a href="/deals">Top Deals</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="#" id="login">Login</a></li>
+        <li><a href="#" id="signup">Signup</a></li><br>
+      </ul>
+    </nav>
+  </header>
+
+  {{>menu}}
+  {{>login}}
+  {{>signup}}
+  {{>user}}
+</div>

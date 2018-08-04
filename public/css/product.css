@@ -1,0 +1,16 @@
+.product-det{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.mid{
+  text-align: center;
+  align-content: center;
+  padding-bottom: 5px;
+}
+
+.mid img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}

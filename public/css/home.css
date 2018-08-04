@@ -1,0 +1,198 @@
+.slider{
+  position: relative;
+  width: 100%;
+}
+
+.sec{
+  width: inherit;
+  position: relative;
+  height: 300px;
+}
+
+.img-sec{
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sec-img{
+  position: relative;
+}
+
+img[alt="sec-img"]{
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.text-sec{
+  width: inherit;
+  background-color: rgb(0,150,202);
+  color: #fff;
+  padding: 50px;
+  height: 300px;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  position: relative;
+}
+
+.text-sec p{
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.my-gallery{
+  position: relative;
+}
+
+.product-sec{
+  margin: 30px 5px 30px 5px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgb(0,150,202);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.product-sec a{
+  color: inherit;
+}
+
+.elec-details{
+  background-image: url('../img/Multimedia59.png');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.elec-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.acc-details{
+  background-image: url('../img/bea-urbeats-bk_01_4.jpg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.acc-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.bea-details{
+  background-image: url('../img/2iqkay9.jpg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.bea-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.cloth-details{
+  background-image: url('../img/file_0da4ff14.jpeg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.cloth-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.home-details{
+  background-image: url('../img/Ultraloq-Smart.jpg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.home-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.enter-details{
+  background-image: url('../img/watch_dogs_2.jpg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.enter-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.jew-details{
+  background-image: url('../img/rolex-cosmograph.jpg');
+  border-right: 0.05em solid rgb(228,114,0);
+  border-bottom: 0.05em solid rgb(228,114,0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.jew-details h2{
+  background-color: rgb(228,114,0);
+  border-radius: 4px;
+}
+
+.product{
+  padding: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+img[alt="product-img"]{
+  width: 100px;
+  object-fit: cover;
+}
+
+.sad{
+  font-size: 60px;
+  font-weight: lighter;
+}

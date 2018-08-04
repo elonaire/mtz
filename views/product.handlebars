@@ -1,0 +1,21 @@
+{{#each products}}
+<div class="product-det">
+  <div class="">
+
+  </div>
+
+  <div class="mid">
+    <img src="../uploads/{{img}}" alt="">
+    <h2>{{name}}</h2>
+    <p>Ksh.<span>{{price}}</span></p>
+    <form>
+      <input type="hidden" name="name">
+      <button type="submit" class="btn-warning">Buy</button>
+    </form>
+  </div>
+
+  <div class="">
+
+  </div>
+</div>
+{{/each}}

@@ -1,0 +1,424 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.mobile{
+	display: none;
+}
+
+.desktop {
+	display: flex;
+	z-index: 999;
+}
+
+.desktop ul{
+	list-style-type: none;
+	background-color: #fff;
+	display: block;
+	width: 100%;
+	margin-left: 0;
+	padding-left: 0;
+	box-shadow: 10px 10px 10px rgb(0,150,202);
+}
+
+.desktop ul li{
+	display: inline-block;
+	line-height: 60px;
+	font-weight: bold;
+}
+
+.desktop ul li a{
+	display: block;
+	color: rgb(111,111,111);
+	text-decoration: none;
+	width: 120px;
+	text-align: center;
+}
+
+.desktop ul li a:hover{
+	color: rgb(0,150,202);
+}
+
+.desktop ul li .btn-primary{
+	position: relative;
+	left: -10px;
+}
+
+.right{
+	float: right;
+	position: relative;
+	padding-right: 30px;
+}
+
+.right-two{
+	float: right;
+	position: relative;
+	font-size: 10px;
+}
+
+.more{
+	font-size: 12px;
+}
+
+img[alt="search"]{
+	width: 15px;
+}
+
+img[alt="logo"]{
+	width: 80px;
+	padding-bottom: 0;
+	position: absolute;
+	top: 8%;
+	left: 1%;
+}
+
+img[alt="user"]{
+	width: 20px;
+}
+
+img[alt="trolley"]{
+	width: 20px;
+}
+
+img[alt="user"]:hover{
+	cursor: pointer;
+}
+
+img[alt="trolley"]:hover{
+	cursor: pointer;
+}
+
+img[alt="menu"]{
+	display: none;
+	width: 30px;
+}
+
+.category{
+	list-style-type: none;
+	background-color: rgb(0,150,202);
+	display: none;
+	margin-left: 0;
+	padding-left: 0;
+	width: 200px;
+	position: relative;
+	z-index: 999;
+}
+
+.category li{
+	border-bottom: 0.05em dotted rgb(239, 239, 239);
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.category li:last-child{
+	border-bottom: 0;
+}
+
+.category li a{
+	color: rgb(63,63,63);
+	padding-left: 5px;
+	display: inline-block;
+	width: 100%;
+}
+
+.category li a:hover{
+	color: rgb(239, 239, 239);
+}
+
+img[alt="icon"]{
+	width: 13px;
+}
+
+.sub-category{
+	background-color: rgb(185,185,255);
+	padding: 10px;
+	width: 600px;
+	height: 100%;
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0%;
+	z-index: 999;
+}
+
+.sub-category .col-4{
+	padding: 3px 20px 3px 20px;
+
+}
+
+/*electronics styling*/
+.electronics{
+	position: relative;
+}
+
+.electronics ul {
+	list-style-type: none;
+}
+
+.electronics ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.electronics ul li a:hover {
+	text-decoration: underline;
+}
+
+/*accessories styling*/
+.accessories{
+	position: relative;
+}
+
+.accessories ul {
+	list-style-type: none;
+}
+
+.accessories ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.accessories ul li a:hover {
+	text-decoration: underline;
+}
+
+/*beauty styling*/
+.beauty{
+	position: relative;
+}
+
+.beauty ul {
+	list-style-type: none;
+}
+
+.beauty ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.beauty ul li a:hover {
+	text-decoration: underline;
+}
+
+/*clothing styling*/
+.clothing{
+	position: relative;
+}
+
+.clothing ul {
+	list-style-type: none;
+}
+
+.clothing ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.clothing ul li a:hover {
+	text-decoration: underline;
+}
+
+/*home styling*/
+.home{
+	position: relative;
+}
+
+.home ul {
+	list-style-type: none;
+}
+
+.home ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.home ul li a:hover {
+	text-decoration: underline;
+}
+
+/*entertainment styling*/
+.enter{
+	position: relative;
+}
+
+.enter ul {
+	list-style-type: none;
+}
+
+.enter ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.enter ul li a:hover {
+	text-decoration: underline;
+}
+
+/*jewelery styling*/
+.jewelery{
+	position: relative;
+}
+
+.jewelery ul {
+	list-style-type: none;
+}
+
+.jewelery ul li a {
+	color: rgb(228,114,0);
+	line-height: 25px;
+}
+
+.jewelery ul li a:hover {
+	text-decoration: underline;
+}
+
+.my-menu{
+  position: absolute;
+  z-index: 999;
+}
+
+.navbar{
+	position: relative;
+}
+
+.trolley{
+	width: 300px;
+	position: absolute;
+	right: 0%;
+	top: 100%;
+	z-index: 999;
+	background-color: rgb(185,185,255);
+	display: none;
+	border-radius: 4px;
+}
+
+.trolley table{
+	width: 100%;
+}
+
+.trolley table tr{
+	line-height: 30px;
+}
+
+.trolley table tr:hover{
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.trolley table td{
+	color: rgb(228,114,0);
+	text-align: center;
+}
+
+#svg-one{
+	position: absolute;
+	left: 40px;
+	top: -18px;
+	display: none;
+	z-index: 500;
+}
+
+#svg-one polygon{
+	fill: rgb(0,150,202);
+}
+
+#svg-two{
+	position: absolute;
+	top: -10%;
+	left: 30%;
+	z-index: 900;
+}
+
+#svg-two polygon{
+	fill: rgb(185,185,255);
+}
+
+#svg-three{
+	position: absolute;
+	top: -3%;
+	left: 33%;
+	z-index: 900;
+}
+
+#svg-three polygon{
+	fill: rgb(185,185,255);
+}
+
+#svg-four{
+	position: absolute;
+	top: -17%;
+	left: 78%;
+	z-index: 900;
+}
+
+#svg-four polygon{
+	fill: rgb(185,185,255);
+}
+
+#svg-five{
+	position: absolute;
+	top: -26%;
+	left: 55%;
+	z-index: 900;
+}
+
+#svg-five polygon{
+	fill: rgb(185,185,255);
+}
+
+.login{
+	position: absolute;
+	left: 55%;
+	top: 55%;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px rgb(159, 159, 159);
+	z-index: 900;
+	width: 300px;
+	background-color: rgb(185,185,255);
+	padding: 3px;
+	display: none;
+}
+
+.signup{
+	position: absolute;
+	left: 63.5%;
+	top: 55%;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px rgb(159, 159, 159);
+	z-index: 900;
+	width: 300px;
+	background-color: rgb(185,185,255);
+	padding: 3px;
+	display: none;
+}
+
+.user{
+	position: absolute;
+	left: 85.5%;
+	top: 100%;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px rgb(159, 159, 159);
+	z-index: 900;
+	width: 150px;
+	background-color: rgb(185,185,255);
+	padding: 3px;
+	display: none;
+}
+
+.user ul li{
+	display: block;
+	list-style-type: none;
+	line-height: 30px;
+}
+
+.user ul li a{
+	display: block;
+	padding: 0 30px 0 30px;
+	color: rgb(228,114,0);
+	border-radius: 3px;
+}
+
+.user ul li a:hover{
+	background-color: #fff;
+}

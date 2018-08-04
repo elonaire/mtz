@@ -1,0 +1,40 @@
+.desktop{
+  display: none;
+}
+
+.mobile{
+  display: block;
+  width: 100%;
+}
+
+.mobile ul li{
+  display: block;
+  line-height: 40px;
+  border-bottom: 0.1em solid gray;
+}
+
+.mobile ul li a{
+  display: block;
+  padding: 0 0 0 20px;
+  color: rgb(111,111,111);
+}
+
+.mobile ul li .search{
+  left: 50%;
+  width: 30%;
+  display: inline-block;
+  position: relative;
+}
+
+.text-sec{
+  display: none;
+}
+
+.img-sec{
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+img[alt="sec-img"]{
+  width: 100%;
+}

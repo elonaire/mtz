@@ -1,0 +1,238 @@
+<div class="container">
+  <div class="controls">
+    <ul>
+      <li><i class="fa fa-dashboard"></i>&emsp;Dashboard</li>
+      <li><i class="fa fa-envelope-o"></i>&emsp;Mailbox&nbsp;<sup><span class="label">0</span></sup></li>
+      <li><i class="fa fa-gears"></i>&emsp;<a href="#">Products</a>
+        <ul class="sub">
+          <li><i class="fa fa-trash"></i>&emsp;Edit</li>
+          <li><i class="fa fa-plus-circle"></i>&emsp;Add</li>
+        </ul>
+      </li>
+      <li><i class="fa fa-shopping-basket"></i>&emsp;Orders&nbsp;<sup><span class="label">0</span></sup></li>
+    </ul>
+  </div>
+
+  <div class="admin-panel">
+    <div class="dash">
+      <div class="user-count">
+        <h2>Registered users</h2>
+      </div>
+
+      <div class="order-count">
+        <h2>Pending Orders</h2>
+      </div>
+
+      <div class="msg-count">
+        <h2>New Messages</h2>
+      </div>
+    </div>
+
+    <div class="mail">
+
+    </div>
+
+    <div class="product-add">
+      <div class="">
+        <form action="/admin/{date}" enctype="multipart/form-data" method="post">
+        <h2>Category</h2>
+        <!--Electronics-->
+        <select name="category" id="category">
+            <option>--category--</option>
+          <option>Electronics</option>
+          <option>Accessories</option>
+          <option>Beauty</option>
+          <option>Clothing</option>
+          <option>Home</option>
+          <option>Entertainment</option>
+          <option>Jewelery</option>
+        </select>
+      </div>
+
+      <div class="">
+        <h2>Sub-category</h2>
+
+        <!--Clothing-->
+        <div class="">
+          <select name="c_gender" id="c-gender">
+            <option>--gender--</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Kids</option>
+          </select>
+        </div>
+
+        <!--Home-->
+        <div class="">
+          <select name="home_sub" id="home-sub">
+            <option>--section--</option>
+            <option>General</option>
+            <option>Kitchen</option>
+            <option>Living</option>
+          </select>
+        </div>
+
+        <!--Entertainment-->
+        <div class="">
+          <select name="enter" id="enter">
+            <option>--type--</option>
+            <option>Games</option>
+            <option>Movies</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="">
+          <select name="sub_category">
+            <option>--sub-category--</option>
+            <optgroup label="Electronics" id="elec-sub">
+              <option>Sound Systems</option>
+              <option>TVs</option>
+              <option>Phones</option>
+              <option>Tablets</option>
+              <option>Cameras</option>
+              <option>Laptops</option>
+              <option>Desktops</option>
+              <option>Microprocessors</option>
+              <option>Microcontrollers</option>
+              <option>PCBs</option>
+            </optgroup>
+
+            <optgroup label="Accessories" id="acc-sub">
+              <option>Earphones</option>
+              <option>Headphones</option>
+              <option>Memory cards</option>
+              <option>Flash drives</option>
+              <option>Chargers</option>
+              <option>Screen</option>
+              <option>Mice</option>
+              <option>Keyboards</option>
+              <option>Others</option>
+            </optgroup>
+
+            <optgroup label="Beauty" id="beauty-sub">
+              <option>Face</option>
+              <option>Hair</option>
+              <option>Body</option>
+              <option>Nails</option>
+              <option>Skincare</option>
+              <option>Dietary</option>
+              <option>Others</option>
+            </optgroup>
+
+            <optgroup label="Clothing" id="cl-sub">
+              <option>Dresses</option>
+              <option>Underwear</option>
+              <option>Official</option>
+              <option>Casual</option>
+              <option>Shoes</option>
+              <option>Other</option>
+            </optgroup>
+
+            <optgroup label="General"  id="general">
+              <option>Curtains</option>
+              <option>Lighting</option>
+              <option>Smart Locks</option>
+              <option>Floor</option>
+              <option>Paintings</option>
+            </optgroup>
+
+            <optgroup label="Kitchen" id="kitchen">
+              <option>Glassware</option>
+              <option>Ceramic</option>
+              <option>Plastic</option>
+            </optgroup>
+
+            <optgroup label="Living Room" id="living">
+              <option>Dining Sets</option>
+              <option>Coaches</option>
+              <option>Tables</option>
+              <option>Wall Units</option>
+            </optgroup>
+
+            <optgroup label="Games" id="games">
+              <option>Kenyan</option>
+              <option>PC</option>
+              <option>Xbox</option>
+              <option>Playstation</option>
+              <option>Wii</option>
+            </optgroup>
+
+            <optgroup label="Movies" id="movies">
+              <option>Kenyan</option>
+              <option>Hollywood</option>
+              <option>Nollywood</option>
+              <option>Bollywood</option>
+            </optgroup>
+
+            <optgroup label="Other" id="ent-other">
+              <option>Game Consoles</option>
+              <option>Gaming PCs</option>
+            </optgroup>
+
+            <optgroup label="Jewelery" id="jewelery">
+              <option>Watches</option>
+              <option>Bangles</option>
+              <option>Bracelets</option>
+              <option>Chains</option>
+              <option>Necklaces</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <div class="">
+        <h2>Product Details</h2>
+        <input type="file" accept="image/*" name="photo" value="">
+        <input type="text" placeholder="Name" name="name" value="">
+        <input type="text" placeholder="Price" name="price" value="">
+        <textarea name="description" placeholder="Description"></textarea>
+        <input type="submit" class="btn-success" name="" value="Add">
+        </form>
+      </div>
+    </div>
+
+    <div class="product-edit">
+        <div class="">
+          <a href="/admin/electronics" class="btn-primary" name="">Electronics</a>
+          <a href="/admin/accessories" class="btn-primary" name="">Accessories</a>
+          <a href="/admin/beauty" class="btn-primary" name="">Beauty</a>
+          <a href="/admin/clothing" class="btn-primary" name="">Clothing</a>
+          <a href="/admin/home" class="btn-primary" name="">Home</a>
+          <a href="/admin/entertainment" class="btn-primary" name="">Entertainment</a>
+          <a href="/admin/jewelery" class="btn-primary" name="">Jewelery</a>
+        </div>
+
+        <div class="edit-section">
+          {{#each products}}
+            <div class="cat-products">
+              <img src="../uploads/{{img}}" alt="product-img">
+              <h1>{{name}}</h1>
+              <p>KSh. {{price}}</p>
+              <div class="edit-options">
+                <a href="{{request.delete}}" class="btn-danger sm">Delete</a><a href="Javascript:void(0)" class="btn-warning sm">Update</a><a href="#" class="btn-success sm">Trend+</a>
+              </div>
+
+              <div class="update-form">
+                <form action="{{request.patch}}" method="post">
+                  <input type="text" name="price" value="{{price}}">
+                  <input type="submit" class="btn-success" value="update">
+                </form>
+              </div>
+
+              <div class="trend-form">
+                <form action="{{request.trend}}" method="post">
+                  <input type="text" name="class" value="{{class}}">
+                  <input type="submit" class="btn-success" value="update">
+                </form>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+    </div>
+
+    <div class="orders">
+
+    </div>
+  </div>
+</div>
