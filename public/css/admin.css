@@ -18,15 +18,21 @@
 
 .product-add{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat( 3, minmax(200px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  margin-bottom: 10px;
 }
 
-.product-add div:nth-child(1){
+.product-add>div:nth-child(3){
+  overflow: hidden;
+}
+
+.product-add>div:nth-child(1){
   text-align: center;
   align-items: center;
 }
 
-.product-add div:nth-child(2){
+.product-add>div:nth-child(2){
   text-align: center;
   align-items: center;
 }
@@ -41,7 +47,7 @@
 }
 
 .controls ul{
-  background-color: rgb(228,114,0);
+  background-color: rgb(26, 26, 255);
   padding: 5px;
   list-style-type: none;
   color: rgb(185,185,255);
@@ -78,13 +84,13 @@
 }
 
 .msg-count{
-  background-color: rgb(26, 26, 255);
+  background-color: rgb(0, 228, 0);
   margin: 0 5px 0 5px;
   border-radius: 4px;
 }
 
 .order-count{
-  background-color: rgb(255, 53, 255);
+  background-color: rgb(0, 228, 0);
   margin: 0 5px 0 5px;
   border-radius: 4px;
 }
@@ -110,20 +116,36 @@
   grid-gap: 0.2em;
 }
 
+.product-edit>div p{
+  color: green;
+}
+
 .product-edit>div:nth-child(1){
   display: grid;
   grid-template-columns: repeat(7,1fr);
   grid-column-gap: 0.1em;
 }
 
-.edit-section>div{
+.edit-section{
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: repeat( 4, minmax(150px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+}
+
+
+.edit-section>div{
   align-items: center;
   text-align: center;
   background-color: #ddd;
-  grid-auto-rows: 70px;
   box-shadow: 4px 4px 4px rgb(159, 159, 159);
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.cat-products img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .edit-options{
@@ -133,11 +155,18 @@
 }
 
 .update-form{
-  width: 150px;
-  position: absolute;
+  display: none;
+}
+
+.trend-form{
   display: none;
 }
 
 .hide{
   display: none;
+}
+
+.admin-det{
+  text-align: center;
+  align-items: center;
 }

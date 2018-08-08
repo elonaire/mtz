@@ -2,36 +2,54 @@
   <header>
     <nav class="desktop">
       <ul>
-        <li><img src="/img/menu.png" alt="menu" ></li>
         <li><a href="/"><img src="/img/logo.png" alt="logo" ></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <li><form method="post" action="#"><input type="text" class="search" placeholder="Search..." name=""><button type="submit" class="btn-primary"><img src="/img/search.png" alt="search"></button></form></li>
-        <li><a href="#" id="login">Login</a></li>
-        <li><a href="#" id="signup">Signup</a></li><br>
+        <br>
         <li class="caret"><a href="#">Categories&nbsp;<span class="more">&#10093;<span></a></li>
         <li><a href="/help">Help</a></li>
         <li><a href="/sell">Sell on MTZ</a></li>
         <li><a href="/deals">Top Deals</a></li>
         <li><a href="/services">Services</a></li>
         <li class="right" title="Cart"><img src="/img/trolley.png" alt="trolley"></li>
-        <li class="right" title="User Account"><img src="/img/user.png" alt="user"></li>
+        <li class="right" title="User Account"><img src="/img/user.png" alt="user">{{>user}}</li>
       </ul>
     </nav>
 
     <nav class="mobile">
       <ul>
-        <li><img src="/img/menu.png" alt="menu" ><form method="post" action="#"><input type="text" class="search" placeholder="Search..." name=""><button type="submit" class="btn-primary"><img src="/img/search.png" alt="search"></button></form></li>
+        <li>
+          <div id="menu">
+            <svg id="bar" width="35" height="20">
+              <rect width="35" height="5"  fill="rgb(31,31,31)" />
+            </svg>
+            <svg id="bar-one" width="40" height="20">
+              <rect width="35" height="5"  fill="rgb(31,31,31)" />
+            </svg>
+            <svg id="bar-two" width="40" height="20">
+              <rect width="35" height="5"  fill="rgb(31,31,31)" />
+            </svg>
+          </div>
+         <form method="post" action="#"><input type="text" class="search" placeholder="Search..." name=""><button id="srchbtn" type="submit" class="btn-primary"><img src="/img/search.png" alt="search"></button></form></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="#" class="dropdown">Categories&emsp;<span class="more">&#10093;<span></a>
+          <ul class="my-cat">
+            <li> <a href="/products/mobile/electronics">Electronics</a> </li>
+            <li> <a href="/products/mobile/accessories">Accessories</a> </li>
+            <li> <a href="/products/mobile/beauty">Beauty &amp; Health</a> </li>
+            <li> <a href="/products/mobile/clothing">Clothing</a> </li>
+            <li> <a href="/products/mobile/home">Home &amp; Living</a> </li>
+            <li> <a href="/products/mobile/entertainment">Entertainment</a> </li>
+            <li> <a href="/products/mobile/jewelery">Jewelery</a> </li>
+          </ul>
+        </li>
         <li><a href="/help">Help</a></li>
         <li><a href="/sell">Sell on MTZ</a></li>
         <li><a href="/deals">Top Deals</a></li>
         <li><a href="/services">Services</a></li>
-        <li><a href="#" id="login">Login</a></li>
-        <li><a href="#" id="signup">Signup</a></li><br>
+        <li><a href="/user/login" id="login">Login</a></li>
+        <li><a href="/user/signup" id="signup">Signup</a></li><br>
       </ul>
     </nav>
   </header>
-
   {{>menu}}
-  {{>login}}
-  {{>signup}}
-  {{>user}}
 </div>

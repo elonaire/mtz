@@ -4,6 +4,7 @@
 @import 'product.css';
 @import 'admin.css';
 @import 'products.css';
+@import 'user.css';
 
 *{
 	margin: 0;
@@ -51,19 +52,6 @@ body{
 	overflow-wrap: normal;
 }
 
-main{
-	flex: 70%;
-	height: auto;
-	flex-wrap: wrap;
-	overflow-wrap: normal;
-}
-
-aside{
-	flex: 30%;
-	height: auto;
-	overflow-wrap: normal;
-}
-
 .btn-lg{
 	border: 0;
 	padding: 7px 18px 7px 18px;
@@ -75,13 +63,14 @@ aside{
 	background-color: #0c9917;
 	color: #fff;
 	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgb(159, 159, 159);
 }
 
 button:hover{
 	cursor: pointer;
 }
 
-input[type='text'], input[type='password'], input[type='email']{
+input[type='text'], input[type='password'], input[type='email'], input[type="number"]{
 	border: 0;
 	padding: 7px;
 	width: 100%;
@@ -114,6 +103,7 @@ input[type="submit"]:hover{
 
 h1,h2,h3,h4,h5,h6{
 	text-align: center;
+	color: rgb(79, 79, 79);
 }
 
 .btn-primary{
@@ -122,6 +112,7 @@ h1,h2,h3,h4,h5,h6{
 	background-color: #2b6fdb;
 	color: #fff;
 	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgb(159, 159, 159);
 }
 
 .btn-lgout{
@@ -145,6 +136,7 @@ h1,h2,h3,h4,h5,h6{
 	background-color: orange;
 	color: #fff;
 	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgb(159, 159, 159);
 }
 
 .btn-danger{
@@ -153,6 +145,7 @@ h1,h2,h3,h4,h5,h6{
 	background-color: rgb(255,79,79);
 	color: #fff;
 	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgb(159, 159, 159);
 }
 
 .lg{

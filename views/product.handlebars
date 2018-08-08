@@ -1,21 +1,31 @@
 {{#each products}}
 <div class="product-det">
-  <div class="">
-
-  </div>
-
   <div class="mid">
     <img src="../uploads/{{img}}" alt="">
+  </div>
+
+  <div class="buy">
     <h2>{{name}}</h2>
     <p>Ksh.<span>{{price}}</span></p>
     <form>
-      <input type="hidden" name="name">
-      <button type="submit" class="btn-warning">Buy</button>
+      <input type="hidden" name="id" value="{{_id}}">
+      <i class="fa fa-map-marker"></i>&emsp;<input id="locate" type="text" name="location">&emsp; <p>Shipping Fee: KSh. </p> <br>
+      <input type="number" min="1" max="{{stock}}" name="quantity">
+      <button type="submit" class="btn-success lg" name="button"> <i class="fa fa-shopping-cart"></i> Add To Cart</button>
+      <button type="submit" class="btn-warning lg">Buy</button>
     </form>
+  </div>
+</div>
+
+<div class="product-des">
+  <div class="">
+    <h2>Description</h2>
+    <p>{{{description}}}</p>
   </div>
 
   <div class="">
-
+    <h2>Product/Service Feedback</h2>
+    <p>Rate this product: <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
   </div>
 </div>
 {{/each}}

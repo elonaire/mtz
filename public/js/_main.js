@@ -163,8 +163,6 @@ $(function(){
   });
 
   //Admin Panel js
-  /*$('#elec-sub,#acc-sub,#beauty-sub,#c-gender,#cl-sub,#home-sub,#general,#kitchen,#living,#enter,#games,#movies,#ent-other,#jewelery').hide();*/
-
   $('#category').on('click', function(){
     if ($(this).val()==="Electronics") {
       $('#elec-sub').css("display","block");
@@ -224,8 +222,35 @@ $(function(){
     $(this).find('div').eq(0).show();
 
     $(this).find('div').eq(0).find('a').eq(1).on('click',function(){
+      $('.trend-form').hide();
       $('.update-form').hide();
       $(this).parent('div').next().show();
+    });
+
+    $(this).find('div').eq(0).find('a').eq(2).on('click',function(){
+      $('.update-form').hide();
+      $('.trend-form').hide();
+      $(this).parent('div').next().next().show();
+    });
+
+    $(this).on('mouseout', function(){
+      $(this).find('div').eq(0).hide();
+    });
+  });
+
+  $('.cat-products').on('click', function(){
+    $(this).find('div').eq(0).show();
+
+    $(this).find('div').eq(0).find('a').eq(1).on('click',function(){
+      $('.trend-form').hide();
+      $('.update-form').hide();
+      $(this).parent('div').next().show();
+    });
+
+    $(this).find('div').eq(0).find('a').eq(2).on('click',function(){
+      $('.update-form').hide();
+      $('.trend-form').hide();
+      $(this).parent('div').next().next().show();
     });
 
     $(this).on('mouseout', function(){
@@ -233,4 +258,30 @@ $(function(){
     });
   });
   //End of admin js
+
+  $('#menu').parent('li').siblings().hide();
+
+  $('#menu').on('click', function(){
+    $(this).parent('li').siblings().toggle(300);
+  });
+
+  $('.dropdown').on('click', function(){
+    $('.my-cat').toggle(300);
+  });
+
+  $('.sub').hide();
+  $('.dropdown-sub').on('click', function(){
+    $('.sub').toggle(300);
+  });
+
+
+  printYear();
+
+  function printYear(){
+    var myDate = new Date();
+    var year = myDate.getFullYear();
+    $('#year').html("&copy; " + year);
+    $('#date').html(myDate).css("color", "green");
+    setTimeout(printYear, 1000);
+  }
 });

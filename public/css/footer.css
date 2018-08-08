@@ -1,7 +1,60 @@
 footer{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	background-color: rgb(228,114,0);
 	color: #fff;
 	width: 100%;
-	bottom: 0;
 	position: relative;
+	bottom: 0;
+	height: 100%;
+	padding: 5px;
+}
+
+footer>div{
+	padding: 10px;
+}
+
+footer p{
+	font-size: 17px;
+}
+
+footer h4{
+	text-align: left;
+	text-transform: uppercase;
+}
+
+footer a{
+	color: #fff;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+footer ul{
+	list-style-type: none;
+}
+
+footer ul li{
+	line-height: 25px;
+}
+
+footer .fa{
+	font-size: 30px;
+}
+
+.fa-facebook-square{
+	color: rgb(59,89,152);
+}
+
+.fa-twitter-square{
+	color: rgb(0,172,238);
+}
+
+.fa-linkedin-square{
+	color: rgb(0,119,181);
+}
+
+.fa-google-plus-square{
+	color: #DC4538;
 }

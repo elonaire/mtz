@@ -1,16 +1,16 @@
 <!--Trending-->
-{{#each products}}
-  <div class="product-sec">
-    <div class="{{class}}">
-      <a href="#"><h2>{{category}}</h2></a>
-    </div>
-
-    <div class="product">
-      <a href="{{request.get}}">
-        <img src="../uploads/{{img}}" alt="product-img">
-        <h3>{{name}}</h3>
-        <p>Ksh.<span>{{price}}</span></p>
-      </a>
-    </div>
+<div class="product-sec">
+  <div class="elec-details">
+    <a href="#"><h2>Electronics</h2></a>
   </div>
-{{/each}}
+
+  {{#each products}}
+  <a href="{{request.get}}">
+    <div class="product">
+      <img src="../uploads/{{img}}" alt="product-img">
+      <p>{{name}}</p>
+      <h3>KSh.<span>{{price}}</span></h3>
+    </div>
+  </a>
+  {{/each}}
+</div>

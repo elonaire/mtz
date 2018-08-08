@@ -6,14 +6,30 @@
 
 .product{
   margin: 3px 3px 0 3px;;
-  background-color: #ddd;
   border-radius: 4px;
   box-shadow: 4px 4px 4px rgb(159, 159, 159);
   z-index: 700;
+  overflow: hidden;
+  word-wrap: break-word;
+  padding: 5px;
+  text-align: center;
+  align-content: center;
 }
 
 .product img{
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.product p{
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.product h3{
+  color: green;
 }

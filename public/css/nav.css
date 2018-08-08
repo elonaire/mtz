@@ -323,28 +323,6 @@ img[alt="icon"]{
 	fill: rgb(0,150,202);
 }
 
-#svg-two{
-	position: absolute;
-	top: -10%;
-	left: 30%;
-	z-index: 900;
-}
-
-#svg-two polygon{
-	fill: rgb(185,185,255);
-}
-
-#svg-three{
-	position: absolute;
-	top: -3%;
-	left: 33%;
-	z-index: 900;
-}
-
-#svg-three polygon{
-	fill: rgb(185,185,255);
-}
-
 #svg-four{
 	position: absolute;
 	top: -17%;
@@ -358,7 +336,7 @@ img[alt="icon"]{
 
 #svg-five{
 	position: absolute;
-	top: -26%;
+	top: -14%;
 	left: 55%;
 	z-index: 900;
 }
@@ -367,35 +345,9 @@ img[alt="icon"]{
 	fill: rgb(185,185,255);
 }
 
-.login{
-	position: absolute;
-	left: 55%;
-	top: 55%;
-	border-radius: 4px;
-	box-shadow: 4px 4px 4px rgb(159, 159, 159);
-	z-index: 900;
-	width: 300px;
-	background-color: rgb(185,185,255);
-	padding: 3px;
-	display: none;
-}
-
-.signup{
-	position: absolute;
-	left: 63.5%;
-	top: 55%;
-	border-radius: 4px;
-	box-shadow: 4px 4px 4px rgb(159, 159, 159);
-	z-index: 900;
-	width: 300px;
-	background-color: rgb(185,185,255);
-	padding: 3px;
-	display: none;
-}
-
 .user{
 	position: absolute;
-	left: 85.5%;
+	right: 3.5%;
 	top: 100%;
 	border-radius: 4px;
 	box-shadow: 4px 4px 4px rgb(159, 159, 159);
@@ -410,15 +362,10 @@ img[alt="icon"]{
 	display: block;
 	list-style-type: none;
 	line-height: 30px;
+	font-size: 12px;
 }
 
 .user ul li a{
 	display: block;
-	padding: 0 30px 0 30px;
-	color: rgb(228,114,0);
 	border-radius: 3px;
-}
-
-.user ul li a:hover{
-	background-color: #fff;
 }

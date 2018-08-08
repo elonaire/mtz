@@ -1,0 +1,29 @@
+.signup{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 10px 0 10px 0;
+}
+
+.signup>div:nth-child(2){
+  background-color: #fff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+}
+
+.login{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 10px 0 10px 0;
+}
+
+.login>div:nth-child(2){
+  background-color: #fff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+}
+
+img[alt="user-logo"]{
+  width: 90px;
+  position: relative;
+  left: 45%;
+}

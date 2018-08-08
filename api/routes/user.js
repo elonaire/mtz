@@ -5,6 +5,18 @@ const bcrypt = require('bcrypt');
 
 const User = require('../models/user');
 
+router.get('/login', (req,res,next)=>{
+  res.render('login', {
+    title: "Login"
+  });
+});
+
+router.get('/signup', (req,res,next)=>{
+  res.render('signup', {
+    title: "Signup"
+  });
+});
+
 router.post('/:date', (req,res,next)=>{
   bcrypt.hash(req.body.pwd, 10, (err,hash)=>{
     if (err) {

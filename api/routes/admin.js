@@ -432,7 +432,8 @@ router.post('/:date', upload.single('photo'), (req,res,next)=>{
       name: req.body.name,
       img: req.file.filename,
       price: req.body.price,
-      description: req.body.description
+      description: req.body.description,
+      stock: req.body.stock
     });
 
     product
@@ -500,6 +501,7 @@ router.get('/:category', (req,res,next)=>{
           sub_category: doc.sub_category,
           img: doc.img,
           description: doc.description,
+          stock: doc.stock,
           request: {
             get: "/products/" + doc._id,
             delete: "/admin/delete/" + doc._id,
@@ -539,7 +541,8 @@ router.get('/delete/:id', (req,res,next)=>{
 router.post('/update/:id', (req,res,next)=>{
   let id = req.params.id;
   let newPrice = req.body.price;
-  Product.update({_id: id}, {$set:{price: newPrice}})
+  let newStock = req.body.stock;
+  Product.update({_id: id}, {$set:{price: newPrice,stock: newStock}})
   .exec()
   .then(result=>{
     console.log(`Updated product with id: ${id} succesfully`);

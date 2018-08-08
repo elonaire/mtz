@@ -1,6 +1,6 @@
 .product-det{
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .mid{
@@ -10,7 +10,64 @@
 }
 
 .mid img{
-  width: 400px;
+  width: 300px;
   height: 400px;
   object-fit: cover;
+  padding: 10px 0 0 0;
+}
+
+.buy{
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.buy p{
+  font-size: 20px;
+}
+
+.buy .fa-map-marker{
+  color: rgb(228,114,0);
+  font-size: 25px;
+}
+
+#locate{
+  width: 50px;
+  border-radius: 0;
+  line-height: 10px;
+  border: 0;
+}
+
+#locate:focus{
+  box-shadow: 0;
+}
+
+.buy input[type="number"]{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.product-des{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: minmax(600px, auto);
+}
+
+.product-des>div:nth-child(1){
+  word-break: break-all;
+  padding: 10px;
+}
+
+.product-des>div:nth-child(1) h2{
+  background-color: rgb(228,114,0);
+  padding: 3px;
+}
+
+.product-des>div:nth-child(2){
+  word-break: break-all;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
 }

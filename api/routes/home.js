@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const Product = require('../models/product');
-const User = require('../models/user');
 
 
 router.get('/', (req,res,next)=>{
@@ -26,11 +25,9 @@ router.get('/', (req,res,next)=>{
           sub_category: doc.sub_category,
           img: doc.img,
           description: doc.description,
+          stock: doc.stock,
           request: {
-            get: "/products/" + doc._id,
-            delete: "/admin/delete/" + doc._id,
-            patch: "/admin/update/" + doc._id,
-            trend: "/admin/trend/" + doc._id
+            get: "/products/" + doc._id
           }
         };
       })
@@ -39,6 +36,43 @@ router.get('/', (req,res,next)=>{
     console.log(response.products);
     res.render('home', {
       title: "MTZ",
+      products: response.products
+    });
+  })
+  .catch(err=>{
+    console.log(err);
+  });
+});
+
+
+router.get('/products/mobile/:category', (req,res,next)=>{
+  let category = req.params.category;
+  Product.find({category:category})
+  .exec()
+  .then(docs=>{
+    const response = {
+      products: docs.map(doc=>{
+        return {
+          _id: doc._id,
+          class: doc.class,
+          name: doc.name,
+          price: doc.price,
+          gender: doc.gender,
+          section: doc.section,
+          type: doc.type,
+          category: doc.category,
+          sub_category: doc.sub_category,
+          img: doc.img,
+          description: doc.description,
+          stock: doc.stock,
+          request: {
+            get: "/products/" + doc._id
+          }
+        };
+      })
+    };
+    res.render('products', {
+      title: category,
       products: response.products
     });
   })
