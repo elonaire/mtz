@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const Product = require('../models/product');
+const Order = require('../models/order');
 
 
 router.get('/', (req,res,next)=>{
@@ -33,10 +34,30 @@ router.get('/', (req,res,next)=>{
       })
     };
 
-    console.log(response.products);
-    res.render('home', {
-      title: "MTZ",
-      products: response.products
+    Order.find({confirmed: false})
+    .exec()
+    .then(docsTwo=>{
+      const responseTwo = {
+        count: docsTwo.length,
+        orders: docsTwo.map(docTwo=>{
+          return {
+            _id: docTwo._id,
+            name: docTwo.name,
+            price: docTwo.price,
+            quantity: docTwo.quantity
+          };
+        })
+      };
+
+      console.log(response.products);
+      res.render('home', {
+        title: "MTZ",
+        products: response.products,
+        orders: responseTwo.orders
+      });
+    })
+    .catch(err=>{
+      console.log(err);
     });
   })
   .catch(err=>{

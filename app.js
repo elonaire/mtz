@@ -11,8 +11,9 @@ const servicesRoutes = require('./api/routes/services');
 const adminRoutes = require('./api/routes/admin');
 const productsRoutes = require('./api/routes/products');
 const userRoutes = require('./api/routes/user');
+const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect('mongodb://localhost:27017/mtz', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://elonaire:aseneka@cluster0-fcl9s.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
 //block header from containing info about server
 app.disable('x-powered-by');
@@ -36,6 +37,7 @@ app.use('/services', servicesRoutes);
 app.use('/admin', adminRoutes);
 app.use('/products',productsRoutes);
 app.use('/user',userRoutes);
+app.use('/orders',orderRoutes);
 
 app.use((req,res,next)=>{
 	res.type('text/html');

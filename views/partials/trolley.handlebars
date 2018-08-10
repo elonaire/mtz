@@ -1,0 +1,25 @@
+<div class="trolley">
+  <div class="row">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each orders}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{quantity}}</td>
+          <td>{{price}}</td>
+          <td><span title="remove" class="close"><a href="/orders/{{_id}}">&#10008;</a></span></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <button type="button" class="btn-warning" name="button">Checkout</button>
+  </div>
+</div>

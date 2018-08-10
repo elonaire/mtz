@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "MTZ Ecommerce",
-  "main": "server.js",
+  "main": "www",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node ./bin/www"
   },
   "author": "Elon Aseneka",
   "license": "ISC",

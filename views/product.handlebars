@@ -7,11 +7,13 @@
   <div class="buy">
     <h2>{{name}}</h2>
     <p>Ksh.<span>{{price}}</span></p>
-    <form>
-      <input type="hidden" name="id" value="{{_id}}">
-      <i class="fa fa-map-marker"></i>&emsp;<input id="locate" type="text" name="location">&emsp; <p>Shipping Fee: KSh. </p> <br>
+    <form method="post">
+      <input type="hidden" name="pid" value="{{_id}}">
+      <input type="hidden" name="name" value="{{name}}">
+      <input type="hidden" name="price" value="{{price}}">
+      <i class="fa fa-map-marker"></i>&emsp;<input id="locate" type="text" name="location" value="Nairobi">&emsp; <p>Shipping Fee: KSh. </p> <br>
       <input type="number" min="1" max="{{stock}}" name="quantity">
-      <button type="submit" class="btn-success lg" name="button"> <i class="fa fa-shopping-cart"></i> Add To Cart</button>
+      <button type="submit" formaction="/orders" class="btn-success lg" name="button"> <i class="fa fa-shopping-cart"></i> Add To Cart</button>
       <button type="submit" class="btn-warning lg">Buy</button>
     </form>
   </div>
