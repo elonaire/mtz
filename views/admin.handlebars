@@ -1,6 +1,6 @@
 <div class="container">
   <div class="controls">
-    <ul>
+    <ul class="c-target">
       <li class="admin-det">
         <img src="" alt="admin-photo">
         <p>Murtaza Mohammed</p>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="admin-panel">
-    <div class="dash">
+    <div class="dash" id="dash">
       <div class="user-count">
         <h2>Registered users</h2>
       </div>
@@ -36,7 +36,7 @@
 
     </div>
 
-    <div class="product-add">
+    <div class="product-add" id="add">
       <div class="">
         <form action="/admin/{date}" enctype="multipart/form-data" method="post">
         <h2>Category</h2>
@@ -198,7 +198,7 @@
       </div>
     </div>
 
-    <div class="product-edit">
+    <div class="product-edit" id="edit">
         <div class="">
           <a href="/admin/electronics" class="btn-primary" name="">Electronics</a>
           <a href="/admin/accessories" class="btn-primary" name="">Accessories</a>

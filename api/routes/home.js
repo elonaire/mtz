@@ -102,4 +102,10 @@ router.get('/products/mobile/:category', (req,res,next)=>{
   });
 });
 
+router.get('/profile', (req,res,next)=>{
+  res.render('profile', {
+    title: "User Profile"
+  })
+});
+
 module.exports = router;

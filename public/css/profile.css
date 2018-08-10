@@ -1,0 +1,80 @@
+.profile{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.user-info{
+  padding: 20px 0 0 10px;
+  border-right: 0.05em solid rgb(255, 255, 255);
+  align-items: center;
+  text-align: center;
+}
+
+.user-info h2{
+  border-bottom: 0.05em solid rgb(255, 255, 255);
+}
+
+.user-info p{
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.orders{
+  padding: 20px 10px 0 10px;
+}
+
+.orders h2{
+  border-bottom: 0.05em solid rgb(255, 255, 255);
+}
+
+.orders ul{
+  list-style-type: none;
+}
+
+.orders ul li{
+
+}
+
+.orders table{
+	width: 100%;
+}
+
+.orders table tr{
+	line-height: 30px;
+}
+
+.orders table tr:hover{
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.orders table td{
+	color: rgb(228,114,0);
+	text-align: center;
+}
+
+.cart{
+  padding: 20px 10px 0 10px;
+}
+
+.cart h2{
+  border-bottom: 0.05em solid rgb(255, 255, 255);
+}
+
+.cart table{
+	width: 100%;
+}
+
+.cart table tr{
+	line-height: 30px;
+}
+
+.cart table tr:hover{
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.cart table td{
+	color: rgb(228,114,0);
+	text-align: center;
+}

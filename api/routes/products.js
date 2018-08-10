@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+
 const Product = require('../models/product');
+const Order = require('../models/order');
 
 router.get('/', (req,res,next)=>{
   Product.find()
@@ -29,13 +31,6 @@ router.get('/', (req,res,next)=>{
         };
       })
     };
-
-    console.log(response.products);
-
-    res.render('products', {
-      title: "Products",
-      products: response.products
-    });
   })
   .catch(err=>{
     console.log(err);
@@ -48,9 +43,32 @@ router.get('/:id', (req,res,next)=>{
   .exec()
   .then(docs=>{
     console.log(docs);
-    res.render('product', {
-      title: "Product Details",
-      products: docs
+
+    Order.find({confirmed: false})
+    .exec()
+    .then(docsTwo=>{
+      const responseTwo = {
+        count: docsTwo.length,
+        orders: docsTwo.map(docTwo=>{
+          return {
+            _id: docTwo._id,
+            name: docTwo.name,
+            price: docTwo.price,
+            quantity: docTwo.quantity
+          };
+        })
+      };
+
+      console.log(responseTwo.orders);
+
+      res.render('product', {
+        title: "Product Details",
+        products: docs,
+        orders: responseTwo.orders
+      });
+    })
+    .catch(err=>{
+      console.log(err);
     });
   })
   .catch(err=>{

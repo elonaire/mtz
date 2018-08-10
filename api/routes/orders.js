@@ -34,6 +34,8 @@ router.post('/',(req,res,next)=>{
   let quantity =  req.body.quantity;
   let location =  req.body.location;
 
+  let url = req.get('host');
+
   let order = new Order({
     _id: new mongoose.Types.ObjectId(),
     p_id: p_id,
@@ -58,6 +60,7 @@ router.post('/',(req,res,next)=>{
         .exec()
         .then(result=>{
           console.log("Stock updated succesfully");
+          res.redirect(303,url + '/products' + id);
         })
         .catch(err=>{
           console.log(err);
@@ -68,6 +71,7 @@ router.post('/',(req,res,next)=>{
         .exec()
         .then(result=>{
           console.log("Stock updated succesfully to 0");
+          res.redirect(303,url + '/products' + id);
         })
         .catch(err=>{
           console.log(err);
@@ -88,7 +92,7 @@ router.get('/:id',(req,res,next)=>{
   Order.remove({_id: id})
   .exec()
   .then(result=>{
-    console.log(`Product ${id} removed succesfully.`);
+    console.log(`Order ${id} removed succesfully.`);
     res.redirect(303, '/');
   })
   .catch(err=>{

@@ -5,6 +5,7 @@
 @import 'admin.css';
 @import 'products.css';
 @import 'user.css';
+@import 'profile.css';
 
 *{
 	margin: 0;

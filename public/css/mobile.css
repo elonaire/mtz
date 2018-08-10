@@ -140,8 +140,16 @@ img[alt="sec-img"]{
 
 .product-edit>div:nth-child(1){
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat( 3, minmax(110px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(110px, 1fr) );
   grid-column-gap: 0.1em;
+}
+
+.dash{
+  display: grid;
+  grid-template-columns: repeat( 3, minmax(45px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(45px, 1fr) );
+  font-size: 10px;
 }
 
 .controls ul{
@@ -204,4 +212,16 @@ img[alt="user-logo"]{
   width: 90px;
   position: relative;
   left: 12%;
+}
+
+.signup{
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.login{
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px 0 10px 0;
 }

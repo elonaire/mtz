@@ -89,11 +89,6 @@ img[alt="trolley"]:hover{
 	cursor: pointer;
 }
 
-img[alt="menu"]{
-	display: none;
-	width: 30px;
-}
-
 .category{
 	list-style-type: none;
 	background-color: rgb(0,150,202);
